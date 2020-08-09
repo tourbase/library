@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Method;
+namespace Tourbase\Method;
 
-use Arctic\Api;
+use Tourbase\Api;
 
 class Delete extends Method
 {

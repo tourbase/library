@@ -4,7 +4,7 @@
 chdir(__DIR__);
 require 'init.i.php';
 
-$trip_type = \Arctic\Model\Trip\TripType::load(1);
+$trip_type = \Tourbase\Model\Trip\TripType::load(1);
 $response = $trip_type->updateAvailability(array(
 	'create' => true,
 	'update' => true,

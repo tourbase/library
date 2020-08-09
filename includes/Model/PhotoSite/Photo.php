@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\PhotoSite;
+namespace Tourbase\Model\PhotoSite;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Photo

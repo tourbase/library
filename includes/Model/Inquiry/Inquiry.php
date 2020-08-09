@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Inquiry;
+namespace Tourbase\Model\Inquiry;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Inquiry
@@ -19,9 +19,9 @@ use Arctic\Model;
  * @property \DateTime $modifiedon
  * @property \DateTime|null $followedupon
  * @property bool $deleted
- * @property \Arctic\Model\Trip\Trip $trip
- * @property \Arctic\Model\BusinessGroup $businessgroup
- * @property \Arctic\Model\Person\Person $person
+ * @property \Tourbase\Model\Trip\Trip $trip
+ * @property \Tourbase\Model\BusinessGroup $businessgroup
+ * @property \Tourbase\Model\Person\Person $person
  */
 class Inquiry extends Model
 {
@@ -32,8 +32,8 @@ class Inquiry extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference( 'businessgroup' , 'Arctic\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
-		$this->_addSingleReference( 'person' , 'Arctic\Model\Person\Person' , array( 'personid' => 'id' ) );
-		$this->_addSingleReference( 'trip' , 'Arctic\Model\Trip\Trip' , array( 'tripid' => 'id' ) );
+		$this->_addSingleReference( 'businessgroup' , 'Tourbase\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
+		$this->_addSingleReference( 'person' , 'Tourbase\Model\Person\Person' , array( 'personid' => 'id' ) );
+		$this->_addSingleReference( 'trip' , 'Tourbase\Model\Trip\Trip' , array( 'tripid' => 'id' ) );
 	}
 }

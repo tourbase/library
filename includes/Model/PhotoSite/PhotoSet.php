@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\PhotoSite;
+namespace Tourbase\Model\PhotoSite;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class PhotoSet
@@ -33,6 +33,6 @@ class PhotoSet extends Model
     public function __construct() {
         parent::__construct();
 
-        $this->_addMultipleReference('photos', 'Arctic\Model\PhotoSite\Photo', 'photo');
+        $this->_addMultipleReference('photos', 'Tourbase\Model\PhotoSite\Photo', 'photo');
     }
 }

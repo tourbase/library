@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model;
+namespace Tourbase\Model;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Country

@@ -1,7 +1,7 @@
 <?php
 
-namespace Arctic\Model\Invoice;
-use Arctic\Model;
+namespace Tourbase\Model\Invoice;
+use Tourbase\Model;
 
 /**
  * Class Transaction

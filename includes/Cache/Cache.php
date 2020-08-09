@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Cache;
+namespace Tourbase\Cache;
 
-use Arctic\Api;
+use Tourbase\Api;
 
 interface Cache
 {

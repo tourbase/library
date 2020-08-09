@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Rental;
+namespace Tourbase\Model\Rental;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * @class Rental
@@ -10,7 +10,7 @@ use Arctic\Model;
  * @property string $registrationupdatedon
  * @property bool $registrationcomplete
  * @property bool $deleted
- * @property \Arctic\Model\Activity\Activity $activity
+ * @property \Tourbase\Model\Activity\Activity $activity
  * @property RentalInclude[] $includes
  */
 class Rental extends Model
@@ -22,7 +22,7 @@ class Rental extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference('activity', '\Arctic\Model\Activity\Activity', array('activityid' => 'id'));
+		$this->_addSingleReference('activity', '\Tourbase\Model\Activity\Activity', array('activityid' => 'id'));
 		$this->_addMultipleReference('includes', __NAMESPACE__ . '\RentalInclude', 'include');
 	}
 }

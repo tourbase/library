@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Store;
+namespace Tourbase\Model\Store;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class ShippingMethod

@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Person;
+namespace Tourbase\Model\Person;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Address
@@ -19,7 +19,7 @@ use Arctic\Model;
  * @property bool $subscribetomaillist
  * @property string $createdon
  * @property string $modifiedon
- * @property \Arctic\Model\Country $country
+ * @property \Tourbase\Model\Country $country
  */
 class Address extends Model
 {
@@ -32,6 +32,6 @@ class Address extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference('country', 'Arctic\Model\Country', array('countryid'=>'id'));
+		$this->_addSingleReference('country', 'Tourbase\Model\Country', array('countryid'=>'id'));
 	}
 }

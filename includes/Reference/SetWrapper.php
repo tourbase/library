@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic\Reference;
+namespace Tourbase\Reference;
 
-use Arctic\Api;
-use Arctic\Model;
-use Arctic\ModelSet;
+use Tourbase\Api;
+use Tourbase\Model;
+use Tourbase\ModelSet;
 
 class SetWrapper extends ModelSet
 {
@@ -191,7 +191,7 @@ class SetWrapper extends ModelSet
 	}
 
 //	public function offsetUnset($offset) {
-//		ArcticAPI::getInstance()->raiseError('Invalid Access','You can not write to model sets.');
+//		TourbaseAPI::getInstance()->raiseError('Invalid Access','You can not write to model sets.');
 //	}
 
 	/**

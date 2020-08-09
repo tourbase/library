@@ -1,13 +1,13 @@
 {
-    "name": "arctic/arctic2api",
+    "name": "Tourbase/Tourbase2api",
     "type": "library",
-    "description": "API for interacting with Arctic Reservations version 2",
-    "homepage": "https://github.com/arcticres/arctic-api",
+    "description": "API for interacting with Tourbase Reservations version 2",
+    "homepage": "https://github.com/Tourbaseres/Tourbase-api",
     "license": "MIT",
     "authors": [
         {
             "name": "L. Nathan Perkins",
-            "email": "nathan@arcticreservations.com",
+            "email": "nathan@Tourbasereservations.com",
             "homepage": "https://www.nathanntg.com/"
         }
     ],
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Arctic\\": "includes/"
+            "Tourbase\\": "includes/"
         }
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Person;
+namespace Tourbase\Model\Person;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class EmailAddress

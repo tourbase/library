@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Trip;
+namespace Tourbase\Model\Trip;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Trip
@@ -40,10 +40,10 @@ use Arctic\Model;
  * @property bool $deleted
  * @property string $onlinebookingurl Link to book online (if enabled and available).
  * @property int $guests Number of guests.
- * @property \Arctic\Model\BusinessGroup $businessgroup
+ * @property \Tourbase\Model\BusinessGroup $businessgroup
  * @property PricingLevel[] $pricinglevels
  * @property Component[] $components
- * @property \Arctic\Model\Guide\GuideSchedule[] $guides
+ * @property \Tourbase\Model\Guide\GuideSchedule[] $guides
  */
 class Trip extends Model
 {
@@ -54,9 +54,9 @@ class Trip extends Model
 	public function __construct() {
 		parent::__construct();
 
-        $this->_addSingleReference( 'businessgroup' , 'Arctic\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
+        $this->_addSingleReference( 'businessgroup' , 'Tourbase\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
         $this->_addMultipleReference('pricinglevels', __NAMESPACE__ . '\PricingLevel' , 'pricinglevel' );
         $this->_addMultipleReference('components', __NAMESPACE__ . '\Component' , 'component' );
-        $this->_addMultipleReference('guides', 'Arctic\Model\Guide\GuideSchedule', 'guide');
+        $this->_addMultipleReference('guides', 'Tourbase\Model\Guide\GuideSchedule', 'guide');
 	}
 }

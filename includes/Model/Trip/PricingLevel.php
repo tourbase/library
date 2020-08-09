@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Trip;
+namespace Tourbase\Model\Trip;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class PricingLevel

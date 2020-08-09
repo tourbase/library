@@ -26,7 +26,7 @@ require 'init.i.php';
 // EXAMPLE 1: get availability data for single item
 
 // load rental item #3
-$rental_item = \Arctic\Model\Rental\Item::load(3);
+$rental_item = \Tourbase\Model\Rental\Item::load(3);
 var_dump($rental_item->availability());
 
 // EXAMPLE 2: get availability data for many items, all as part of a single query
@@ -34,7 +34,7 @@ var_dump($rental_item->availability());
 // get availability throughout a business group
 // including the extra query parameters will cause all rental items to be returned with an availability data
 // structure showing usage over the time period
-$rental_items = \Arctic\Model\Rental\Item::query('businessgroupid = 3', array(
+$rental_items = \Tourbase\Model\Rental\Item::query('businessgroupid = 3', array(
 	'available_start' => '2015-01-01',
 	'available_end' => '2015-02-01'
 ));

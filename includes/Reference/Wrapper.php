@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic\Reference;
+namespace Tourbase\Reference;
 
-use Arctic\Api;
-use Arctic\Exception;
-use Arctic\Model;
+use Tourbase\Api;
+use Tourbase\Exception;
+use Tourbase\Model;
 
 class Wrapper
 {

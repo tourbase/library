@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Rental;
+namespace Tourbase\Model\Rental;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * @class RentalInclude

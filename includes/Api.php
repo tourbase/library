@@ -1,16 +1,16 @@
 <?php
 
-namespace Arctic;
+namespace Tourbase;
 
 /**
  * Class Api
- * This handles authorization and interaction with the Arctic Reservations API.
+ * This handles authorization and interaction with the Tourbase Reservations API.
  * This is a singleton class.
  *
  * To specify configuration, use the init function.
  *
  *
- * \Arctic\Api::init('installation_name','api_username','api_password');
+ * \Tourbase\Api::init('installation_name','api_username','api_password');
  */
 class Api
 {
@@ -84,8 +84,8 @@ class Api
 	public static function autoloadClass($class) {
 		$class = ltrim($class, '\\');
 
-		// only process "Arctic\" vendor code
-		if (0 !== substr_compare($class, 'Arctic\\', 0, 7)) return;
+		// only process "Tourbase\" vendor code
+		if (0 !== substr_compare($class, 'Tourbase\\', 0, 7)) return;
 		$class = substr($class, 7);
 
 		// convert to file name
@@ -149,7 +149,7 @@ class Api
 
 		// assemble host
 		if ( !isset( $config[ 'host' ] ) ) {
-			$config[ 'host' ] = $installation_name . '.arcticres.com';
+			$config[ 'host' ] = $installation_name . '.Tourbaseres.com';
 		}
 
 		// get instance
@@ -157,7 +157,7 @@ class Api
 
 		// already initialized
 		if ($instance->_config) {
-			$instance->raiseError('Already Configured', 'The Arctic API class has not been initialized. It must be deinitialized first.');
+			$instance->raiseError('Already Configured', 'The Tourbase API class has not been initialized. It must be deinitialized first.');
 			return;
 		}
 
@@ -242,7 +242,7 @@ class Api
 
 	private function _getConfig($name,$default=null) {
 		if ( !isset( $this->_config ) ) {
-			$this->raiseError('Not Configured','The Arctic API class has not been initiated.');
+			$this->raiseError('Not Configured','The Tourbase API class has not been initiated.');
 			return null;
 		}
 
@@ -288,7 +288,7 @@ class Api
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_HEADER, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT, $this->_getConfig('timeout',10));
-		curl_setopt($ch, CURLOPT_USERAGENT, 'ArcticAPI/' . self::VERSION);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'TourbaseAPI/' . self::VERSION);
 
 		// set headers
 		if ($headers) {

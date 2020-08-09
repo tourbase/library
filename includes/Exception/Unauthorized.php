@@ -1,7 +1,7 @@
 <?php
 
-namespace Arctic\Exception;
+namespace Tourbase\Exception;
 
-use Arctic\Exception;
+use Tourbase\Exception;
 
 class Unauthorized extends Exception { }

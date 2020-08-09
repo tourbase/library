@@ -1,6 +1,6 @@
 <?php
 
-namespace Arctic;
+namespace Tourbase;
 
 class Exception extends \Exception
 {

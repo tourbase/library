@@ -1,6 +1,6 @@
 <?php
 
-namespace Arctic\Cache;
+namespace Tourbase\Cache;
 
 class XCache implements Cache
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\PhotoSite;
+namespace Tourbase\Model\PhotoSite;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class PhotoRetailItem
@@ -31,7 +31,7 @@ use Arctic\Model;
  * @property string $createdon
  * @property string $modifiedon
  * @property bool $deleted
- * @property \Arctic\Model\Store\ShippingClass $shippingclass
+ * @property \Tourbase\Model\Store\ShippingClass $shippingclass
  */
 class PhotoRetailItem extends Model
 {
@@ -42,6 +42,6 @@ class PhotoRetailItem extends Model
     public function __construct() {
         parent::__construct();
 
-        $this->_addSingleReference('shippingclass', 'Arctic\Model\Store\ShippingClass');
+        $this->_addSingleReference('shippingclass', 'Tourbase\Model\Store\ShippingClass');
     }
 }

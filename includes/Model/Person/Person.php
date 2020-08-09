@@ -1,11 +1,11 @@
 <?php
 
-namespace Arctic\Model\Person;
+namespace Tourbase\Model\Person;
 
-use Arctic\Api;
-use Arctic\Method\Insert;
-use Arctic\Method\Method;
-use Arctic\Model;
+use Tourbase\Api;
+use Tourbase\Method\Insert;
+use Tourbase\Method\Method;
+use Tourbase\Model;
 
 class _MethodInsertOrUpdate extends Insert
 {
@@ -68,7 +68,7 @@ class _MethodInsertOrUpdate extends Insert
 		return $this->_runRequest($url, $this->_method, json_encode($this->_getRequestData()));
 	}
 
-	protected function _insertNewEmailAddresses(\Arctic\Reference\SetWrapper $potential_email_addresses) {
+	protected function _insertNewEmailAddresses(\Tourbase\Reference\SetWrapper $potential_email_addresses) {
 		/** @var Person $person */
 		$person = $this->_model;
 
@@ -85,7 +85,7 @@ class _MethodInsertOrUpdate extends Insert
 		}
 	}
 
-	protected function _insertNewPhoneNumbers(\Arctic\Reference\SetWrapper $potential_phone_numbers) {
+	protected function _insertNewPhoneNumbers(\Tourbase\Reference\SetWrapper $potential_phone_numbers) {
 		/** @var Person $person */
 		$person = $this->_model;
 
@@ -115,7 +115,7 @@ class _MethodInsertOrUpdate extends Insert
 		return sprintf('%s:%s', $number, $pc);
 	}
 
-	protected function _insertNewAddresses(\Arctic\Reference\SetWrapper $potential_addresses) {
+	protected function _insertNewAddresses(\Tourbase\Reference\SetWrapper $potential_addresses) {
 		/** @var Person $person */
 		$person = $this->_model;
 
@@ -168,7 +168,7 @@ class _MethodInsertOrUpdate extends Insert
 			}
 			else {
 				// standard approach... insert everything
-				if ($obj instanceof \Arctic\Reference\SetWrapper) {
+				if ($obj instanceof \Tourbase\Reference\SetWrapper) {
 					$obj->insertAll();
 				}
 				else {

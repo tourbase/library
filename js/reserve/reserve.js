@@ -1,5 +1,5 @@
 /**
- * Online booking widget constructor for Arctic Reservations.
+ * Online booking widget constructor for Tourbase Reservations.
  * Allows replacing the browse trips page with custom interfaces as part of the larger site. Requires
  * custom JavaScript to actually implement this specific interface.
  *
@@ -8,10 +8,10 @@
  */
 (function(factory) {
 	if (typeof define === 'function' && define.amd) {
-		define("ArcticReserveWidget", ["jquery"], factory);
+		define("TourbaseReserveWidget", ["jquery"], factory);
 	}
 	else {
-		this.ArcticReserveWidget = factory(jQuery);
+		this.TourbaseReserveWidget = factory(jQuery);
 	}
 })(function($) {
 	// BEGIN DEFAULTS

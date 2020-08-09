@@ -1,9 +1,9 @@
 <?php
 
-namespace Arctic\Method;
+namespace Tourbase\Method;
 
-use Arctic\Api;
-use Arctic\Model;
+use Tourbase\Api;
+use Tourbase\Model;
 
 class Update extends Method
 {

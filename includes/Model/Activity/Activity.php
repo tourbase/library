@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Activity;
+namespace Tourbase\Model\Activity;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * @class Activity
@@ -33,11 +33,11 @@ use Arctic\Model;
  * @property int $createdbyuserid
  * @property bool $deleted
  * @property string $manageurl
- * @property \Arctic\Model\Activity\Activity $parentactivity
- * @property \Arctic\Model\Activity\Activity[] $subactivities
- * @property \Arctic\Model\Invoice\Invoice $invoice
- * @property \Arctic\Model\Person\Person $person
- * @property \Arctic\Model\Person\Person $bookingagent
+ * @property \Tourbase\Model\Activity\Activity $parentactivity
+ * @property \Tourbase\Model\Activity\Activity[] $subactivities
+ * @property \Tourbase\Model\Invoice\Invoice $invoice
+ * @property \Tourbase\Model\Person\Person $person
+ * @property \Tourbase\Model\Person\Person $bookingagent
  */
 class Activity extends Model
 {
@@ -61,9 +61,9 @@ class Activity extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference('invoice', 'Arctic\Model\Invoice\Invoice', array('invoiceid'=>'id'));
-		$this->_addSingleReference('person', 'Arctic\Model\Person\Person', array('personid'=>'id'));
-		$this->_addSingleReference('bookingagent', 'Arctic\Model\Person\Person', array('bookingagentid'=>'id'));
+		$this->_addSingleReference('invoice', 'Tourbase\Model\Invoice\Invoice', array('invoiceid'=>'id'));
+		$this->_addSingleReference('person', 'Tourbase\Model\Person\Person', array('personid'=>'id'));
+		$this->_addSingleReference('bookingagent', 'Tourbase\Model\Person\Person', array('bookingagentid'=>'id'));
 		$this->_addSingleReference('parentactivity', __NAMESPACE__ . '\Activity', array('parentactivityid' => 'id'));
 		$this->_addMultipleReference('subactivities', __NAMESPACE__ . '\Activity', array('id' => 'parentactivityid'));
 	}

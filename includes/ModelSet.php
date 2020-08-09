@@ -1,6 +1,6 @@
 <?php
 
-namespace Arctic;
+namespace Tourbase;
 
 class ModelSet implements \IteratorAggregate, \ArrayAccess, \Countable
 {

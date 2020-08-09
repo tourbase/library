@@ -1,9 +1,9 @@
 <?php
 
-namespace Arctic;
+namespace Tourbase;
 
 /**
- * Class ArcticException
+ * Class TourbaseException
  * @method static static[] browse($start=0,$number=50)
  * @method static static[] query($query)
  * @method static static load($id)

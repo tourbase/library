@@ -1,6 +1,6 @@
 <?php
 
-namespace Arctic\Reference;
+namespace Tourbase\Reference;
 
 class Definition
 {

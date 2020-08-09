@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Guide;
+namespace Tourbase\Model\Guide;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class GuideSchedule

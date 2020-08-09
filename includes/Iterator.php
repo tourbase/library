@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic;
+namespace Tourbase;
 
 /**
  * Class Iterator
- * @package Arctic
+ * @package Tourbase
  * A generic iterator that enables paginating over any `Model::browse` or `Model::query` method by automatically
  * advancing through all available pages.
  */

@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic\Method;
+namespace Tourbase\Method;
 
-use Arctic\Api;
-use Arctic\Model;
-use Arctic\ModelSet;
+use Tourbase\Api;
+use Tourbase\Model;
+use Tourbase\ModelSet;
 
 class Query extends Method
 {

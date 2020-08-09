@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Reservation;
+namespace Tourbase\Model\Reservation;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * @class ReservationMember
@@ -21,7 +21,7 @@ use Arctic\Model;
  * @property int $createdbyuserid
  * @property bool $deleted
  * @property Reservation $reservation
- * @property \Arctic\Model\Person\Person $person
+ * @property \Tourbase\Model\Person\Person $person
  */
 class ReservationMember extends Model
 {
@@ -35,6 +35,6 @@ class ReservationMember extends Model
 		parent::__construct();
 
 		$this->_addSingleReference('reservation', __NAMESPACE__ . '\Reservation', array('activityid' => 'activityid'));
-		$this->_addSingleReference('person', 'Arctic\Model\Person\Person', array('personid'=>'id'));
+		$this->_addSingleReference('person', 'Tourbase\Model\Person\Person', array('personid'=>'id'));
 	}
 }

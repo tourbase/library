@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic\Model\Invoice;
+namespace Tourbase\Model\Invoice;
 
-use Arctic\Api;
-use Arctic\Method\Method;
-use Arctic\Model;
+use Tourbase\Api;
+use Tourbase\Method\Method;
+use Tourbase\Model;
 
 class _MethodRefresh extends Method
 {
@@ -60,7 +60,7 @@ class _MethodPdf extends Method
  * @property string $note
  * @property string $createdon
  * @property string $modifiedon
- * @property \Arctic\Model\Person\Person $person
+ * @property \Tourbase\Model\Person\Person $person
  * @property Group[] $groups
  * @property Item[] $items
  * @property Transaction[] $transactions
@@ -77,7 +77,7 @@ class Invoice extends Model
     public function __construct() {
         parent::__construct();
 
-        $this->_addSingleReference('person', 'Arctic\Model\Person\Person', array('personid'=>'id'));
+        $this->_addSingleReference('person', 'Tourbase\Model\Person\Person', array('personid'=>'id'));
         $this->_addMultipleReference('groups', __NAMESPACE__ . '\Group', 'group', array('id'=>'invoiceid'));
         $this->_addMultipleReference('items', __NAMESPACE__ . '\Item', 'item', array('id'=>'invoiceid'));
         $this->_addMultipleReference('transactions', __NAMESPACE__ . '\Transaction', 'transaction', array('id'=>'invoiceid'));

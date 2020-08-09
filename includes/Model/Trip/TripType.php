@@ -1,22 +1,22 @@
 <?php
 
-namespace Arctic\Model\Trip;
+namespace Tourbase\Model\Trip;
 
-use Arctic\Model;
-use Arctic\Method\Method;
+use Tourbase\Model;
+use Tourbase\Method\Method;
 
 class _MethodAvailability extends Method
 {
 	public function __construct() {
-		parent::__construct(Method::TYPE_EXISTING_MODEL, \Arctic\Api::METHOD_POST, 'availability');
+		parent::__construct(Method::TYPE_EXISTING_MODEL, \Tourbase\Api::METHOD_POST, 'availability');
 	}
 
 	protected function _prepareRequest($api_path, $arguments) {
-		if (empty($arguments)) throw new \Arctic\Exception\BadRequest('Trip availability data is required.');
+		if (empty($arguments)) throw new \Tourbase\Exception\BadRequest('Trip availability data is required.');
 
 		// body
 		$body = array_shift($arguments);
-		if (!is_array($body)) throw new \Arctic\Exception\BadRequest('Expected an associative array for type availability data.');
+		if (!is_array($body)) throw new \Tourbase\Exception\BadRequest('Expected an associative array for type availability data.');
 
 		// encode arguments and build URL
 		$url = $this->_buildUrl($api_path, $arguments);
@@ -59,7 +59,7 @@ class _MethodAvailability extends Method
  * @property string $createdon
  * @property string $modifiedon
  * @property bool $deleted
- * @property \Arctic\Model\BusinessGroup $businessgroup
+ * @property \Tourbase\Model\BusinessGroup $businessgroup
  * @property PricingLevel[] $pricinglevels
  * @property Component[] $components
  * @method array updateAvailability(array $data)
@@ -73,7 +73,7 @@ class TripType extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference( 'businessgroup' , 'Arctic\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
+		$this->_addSingleReference( 'businessgroup' , 'Tourbase\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
 		$this->_addMultipleReference('pricinglevels', __NAMESPACE__ . '\PricingLevel' , 'pricinglevel' );
 		$this->_addMultipleReference('components', __NAMESPACE__ . '\Component' , 'component' );
 	}

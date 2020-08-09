@@ -46,7 +46,7 @@ jQuery(function($) {
 
 	// MAIN CODE
 	// create widget
-	var w = new ArcticReserveWidget({
+	var w = new TourbaseReserveWidget({
 		gfsDomain: "reservations.theraftingcompany.com"
 	});
 

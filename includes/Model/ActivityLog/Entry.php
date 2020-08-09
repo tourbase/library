@@ -1,9 +1,9 @@
 <?php
 
-namespace Arctic\Model\ActivityLog;
+namespace Tourbase\Model\ActivityLog;
 
-use Arctic\Method\Method;
-use Arctic\Model;
+use Tourbase\Method\Method;
+use Tourbase\Model;
 
 /**
  * Class Entry
@@ -18,7 +18,7 @@ use Arctic\Model;
  * @property \DateTime $time
  * @property \DateTime|null $dismissedon
  * @property string|null $dismissedbyagentid
- * @property \Arctic\Model\BusinessGroup $businessgroup
+ * @property \Tourbase\Model\BusinessGroup $businessgroup
  * @method dismiss()
  */
 class Entry extends Model
@@ -37,6 +37,6 @@ class Entry extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference( 'businessgroup' , 'Arctic\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
+		$this->_addSingleReference( 'businessgroup' , 'Tourbase\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
 	}
 }

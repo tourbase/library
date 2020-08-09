@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Cache;
+namespace Tourbase\Cache;
 
-use Arctic\Exception;
+use Tourbase\Exception;
 
 class Manager
 {

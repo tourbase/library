@@ -1,10 +1,10 @@
 <?php
 
-namespace Arctic\Model\Rental;
+namespace Tourbase\Model\Rental;
 
-use Arctic\Api;
-use Arctic\Method\Method;
-use Arctic\Model;
+use Tourbase\Api;
+use Tourbase\Method\Method;
+use Tourbase\Model;
 
 class _MethodPrice extends Method
 {
@@ -91,7 +91,7 @@ class _MethodAvailability extends Method
  * @property string $createdon
  * @property string $modifiedon
  * @property bool $deleted
- * @property \Arctic\Model\BusinessGroup $businessgroup
+ * @property \Tourbase\Model\BusinessGroup $businessgroup
  * @property PricingLevel[] $pricinglevels
  * @property array|null $availability If you include `available_start` and `available_end` parameters with a request, these entries will be populated on load.
  * @method array price($start, $end) Get an array of prices over the specified time period.
@@ -106,7 +106,7 @@ class Item extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference( 'businessgroup' , '\Arctic\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
+		$this->_addSingleReference( 'businessgroup' , '\Tourbase\Model\BusinessGroup' , array( 'businessgroupid' => 'id' ) );
 		$this->_addMultipleReference('pricinglevels', __NAMESPACE__ . '\PricingLevel' , 'pricinglevel' );
 	}
 

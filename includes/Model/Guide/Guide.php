@@ -1,8 +1,8 @@
 <?php
 
-namespace Arctic\Model\Guide;
+namespace Tourbase\Model\Guide;
 
-use Arctic\Model;
+use Tourbase\Model;
 
 /**
  * Class Guide
@@ -13,7 +13,7 @@ use Arctic\Model;
  * @property string $createdon
  * @property string $modifiedon
  * @property bool $deleted
- * @property \Arctic\Model\Person\Person $person
+ * @property \Tourbase\Model\Person\Person $person
  */
 class Guide extends Model
 {
@@ -24,6 +24,6 @@ class Guide extends Model
 	public function __construct() {
 		parent::__construct();
 
-		$this->_addSingleReference('person', 'Arctic\Model\Person\Person', array('personid' => 'id'));
+		$this->_addSingleReference('person', 'Tourbase\Model\Person\Person', array('personid' => 'id'));
 	}
 }
